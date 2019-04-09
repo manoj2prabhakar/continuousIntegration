@@ -15,3 +15,13 @@ steps:
   displayName: 'Install Node'
 - script: npm install
   displayName: 'Install dependencies'
+- script: |
+    cd ios
+    bundle install
+    fastlane build
+  displayName: 'Build iOS'
+- script: |
+    cd android
+    bundle install
+    fastlane build
+  displayName: 'Build android'
