@@ -17,7 +17,7 @@ steps:
   displayName: 'Install dependencies'
 - script: |
     cd android
-    workingDirectory: ''
+    bundle install
     gradleWrapperFile: 'gradlew'
     gradleOptions: '-Xmx3072m'
     publishJUnitResults: false
