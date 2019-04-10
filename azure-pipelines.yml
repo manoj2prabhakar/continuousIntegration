@@ -17,6 +17,10 @@ steps:
   displayName: 'Install dependencies'
 - script: |
     cd android
-    bundle install
-    fastlane build
+    workingDirectory: ''
+    gradleWrapperFile: 'gradlew'
+    gradleOptions: '-Xmx3072m'
+    publishJUnitResults: false
+    testResultsFiles: '**/TEST-*.xml'
+    tasks: 'assembleDebug'
   displayName: 'Build android'
