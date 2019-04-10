@@ -18,9 +18,5 @@ steps:
 - script: |
     cd android
     bundle install
-    gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'assembleDebug'
+    gradlew assembleDebug
   displayName: 'Build android'
